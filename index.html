@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Senhas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerenciador de Senhas</h1>
+        <div class="form-group">
+            <label for="service-name">Nome do Serviço:</label>
+            <input type="text" id="service-name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email (opcional):</label>
+            <input type="email" id="email">
+            <input type="checkbox" id="encrypt-email"> Criptografar Email
+        </div>
+        <div class="form-group">
+            <label for="password">Senha:</label>
+            <input type="password" id="password">
+        </div>
+        <button onclick="saveData()">Salvar Dados</button>
+        <hr>
+        <div class="form-group">
+            <button onclick="showData()">Ver Dados</button>
+            <input type="password" id="master-password" placeholder="Senha Mestra">
+        </div>
+        <div id="data-display"></div>
+        <div class="form-group">
+            <label for="master-key">Definir Senha Mestra:</label>
+            <input type="password" id="master-key">
+        </div>
+        <button onclick="setMasterKey()">Definir Senha Mestra</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
